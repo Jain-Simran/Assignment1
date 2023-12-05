@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form for loan calculation</title>
+    <script>
+
+        function store_data() {
+
+            var empid = document.getElementById("empid").value;
+            if (!empid.startsWith("E")) {
+                alert("Employee id should start with E");
+            }
+
+            else {
+
+            
+            var name = document.getElementById("name").value;
+            var add = document.getElementById("add").value;
+            var designation = document.getElementById("designation").value;
+            var loan = document.getElementById("loan").value;
+            var loan_date = document.getElementById("loan_date").value;
+            var interest = document.getElementById("interest").value;
+
+            var maturity_date = document.getElementById("maturity_date").value;
+            document.writeln("<b>Employee Id is</b> :" + empid + "<br>");
+
+            document.writeln("<b> Employee Name is</b> :" + name + "<br>");
+            document.writeln("<b>Address is </b>:" + add + "<br>");
+            document.writeln("<b>Designation is </b>:" + designation + "<br>");
+            document.writeln("<b>Loan Amount is </b>:" + loan + "<br>");
+            document.writeln("<b>Loan Date is </b>:" + loan_date + "<br>");
+            document.writeln("<b>Interest is </b>:" + interest + "<br>");
+            document.writeln("<b>Maturity Date is </b>:" + maturity_date + "<br>");
+            document.writeln("<b>Loan Amount is </b>:" + loan * interest + "<br>");
+            }
+
+
+
+
+
+
+
+        }
+
+    </script>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+    <center>
+        <form>
+            <h3><u>Registration form for loan calculation </u></h3>
+            <table>
+                <tr>
+                    <td>Employee Id:</td>
+                    <td><input type="text" id="empid" minlength="4"></td>
+                </tr>
+
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea id="add"></textarea> </td>
+                </tr>
+                <tr>
+                    <td>Designation:</td>
+                    <td><input type="text" id="designation"></td>
+                </tr>
+
+                <tr>
+                    <td>Loan Amount:</td>
+                    <td><input type="number" id="loan"></td>
+                </tr>
+                <tr>
+                    <td>Date of Loan Taken:</td>
+                    <td><input type="date" id="loan_date"></td>
+                </tr>
+                <tr>
+                    <td>Interest:</td>
+                    <td><input type="number" id="interest"></td>
+                </tr>
+                <tr>
+                    <td>Maturity Date:</td>
+                    <td><input type="date" id="maturity_date"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Register" onclick="store_data();"></td>
+                </tr>
+
+
+            </table>
+
+        </form>
+    </center>
+
+
+</body>
+
+</html>
